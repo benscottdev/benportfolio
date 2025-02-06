@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: "Comic Sans";
+  src: url("./assets/Comic Sans MS.ttf");
+}
+@font-face {
+  font-family: "Nohemi";
+  src: url("./assets/Nohemi-Bold.woff2") format("woff2"), url("./assets/Nohemi-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background: #d6cdcd;
+  font-family: "Nohemi", sans-serif;
+}
+
+h1 {
+  letter-spacing: -12.5px !important;
+}
+
+p {
+  font-family: "Helvetica", sans-serif;
+  font-size: 20px;
+  letter-spacing: -1.5px;
+  color: #202020;
+  font-weight: 100;
+}
+
+.coloured {
+  color: #ff4a02;
+}
+
+.navigation .navWrapper {
+  display: none;
+}
+.navigation #squares {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+.navigation #squares .loaderCube {
+  opacity: 0;
+  fill: #333;
+  width: 120px;
+  height: 120px;
+  margin: 1px;
+}
+.navigation #Layer_3 {
+  cursor: pointer;
+  width: 50px;
+  transition: 0.2s ease-in-out;
+}
+.navigation #Layer_3 .cls-2 {
+  fill: #ff4a02;
+}
+.navigation #Layer_3:hover {
+  rotate: -90deg;
+}
+.navigation .navigationLinks {
+  padding: 50px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: transparent;
+  z-index: 1000000;
+}
+.navigation .navigationLinks .links {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.navigation .navigationLinks .links .link {
+  font-family: "Nohemi", sans-serif;
+  font-weight: 900;
+  letter-spacing: -5px;
+  font-size: 150px;
+  line-height: 140px;
+  text-decoration: none;
+  color: #d6cdcd;
+  transition: 0.3s ease;
+}
+.navigation .navigationLinks .links .link:hover::before {
+  content: "_";
+  color: #ff4a02;
+}
+.navigation .navigationLinks .closeNav {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.portfolio {
+  width: 100%;
+  height: 100vh;
+  padding: 50px;
+  position: relative;
+}
+.portfolio .navigationButton {
+  z-index: 10000000;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+.portfolio .navigationButton .close {
+  opacity: 0;
+}
+.portfolio .homePage .full {
+  width: 100%;
+}
+.portfolio .homePage .threeQuarter {
+  width: 75%;
+}
+.portfolio .homePage .half {
+  width: 50%;
+}
+.portfolio .homePage .third {
+  width: 33%;
+}
+.portfolio .homePage .quarter {
+  width: 25%;
+}
+.portfolio .homePage .homePageContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.portfolio .homePage .logoContainer {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+.portfolio .homePage .logoContainer .logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+  cursor: pointer;
+}
+.portfolio .homePage .logoContainer .logoWrapper h1 {
+  height: 100%;
+  font-size: 12vw;
+  letter-spacing: -1.5vw;
+  z-index: 0;
+  white-space: nowrap;
+  color: #202020;
+}
+.portfolio .homePage .logoContainer .logoWrapper h1 span {
+  height: 100%;
+}
+.portfolio .homePage .logoContainer .logoWrapper svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 10%;
+  min-width: 10%;
+}
+.portfolio .homePage .logoContainer .logoWrapper svg .rect {
+  z-index: 1000;
+  fill: #ff4a02;
+}
+
+.workPage,
+.workItems,
+.workPageContainer,
+.workItemsContainer {
+  width: 100%;
+  height: 100%;
+}
+.workPage .workItemsContainer,
+.workItems .workItemsContainer,
+.workPageContainer .workItemsContainer,
+.workItemsContainer .workItemsContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.workPage .workItemsContainer ul li,
+.workItems .workItemsContainer ul li,
+.workPageContainer .workItemsContainer ul li,
+.workItemsContainer .workItemsContainer ul li {
+  list-style-type: none;
+  font-family: "Nohemi", sans-serif;
+  font-size: 130px;
+  line-height: 115px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -10px;
+}
+.workPage .workItemsContainer ul li img,
+.workItems .workItemsContainer ul li img,
+.workPageContainer .workItemsContainer ul li img,
+.workItemsContainer .workItemsContainer ul li img {
+  border: 1px solid black;
+  position: absolute;
+  min-height: 400px;
+  min-width: 600px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  object-fit: cover;
+  z-index: -10;
+}
+.workPage .workItemsContainer ul li a,
+.workItems .workItemsContainer ul li a,
+.workPageContainer .workItemsContainer ul li a,
+.workItemsContainer .workItemsContainer ul li a {
+  color: #202020;
+  text-decoration: none;
+}
+.workPage .workItemsContainer ul li a:hover::before,
+.workItems .workItemsContainer ul li a:hover::before,
+.workPageContainer .workItemsContainer ul li a:hover::before,
+.workItemsContainer .workItemsContainer ul li a:hover::before {
+  content: "_";
+  color: #ff4a02;
+}
+
+.about {
+  width: 100%;
+  height: 100%;
+}
+.about .aboutContainer {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+}
+.about .aboutContainer .gridItem {
+  margin: 0px 5%;
+}
+.about .aboutContainer .gridItem a {
+  color: #ff4a02;
+}
+.about .aboutContainer .gridItem h2 {
+  font-size: 40px;
+  color: #ff4a02;
+}
+.about .aboutContainer .gridItem p {
+  font-family: "Helvetica", sans-serif;
+}
+.about .aboutContainer .gridItem .funFact {
+  margin-bottom: 5px;
+}
+.about .aboutContainer .gridItem img {
+  max-height: 80vh;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid black;
+  object-position: top;
+}
+
+.chat {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chat .chatContainer {
+  width: 50%;
+}
+.chat .chatContainer a {
+  color: #ff4a02;
+}
