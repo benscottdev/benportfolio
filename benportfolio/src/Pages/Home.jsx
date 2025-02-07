@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import Navigation from "../Components/Navigation";
-import Loader from "../Components/Loader";
 import Logo from "../Components/Logo";
 import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+
 gsap.registerPlugin(TextPlugin);
 
 function Home() {
@@ -14,22 +14,20 @@ function Home() {
       gsap.to(paragraphRef.current, {
         duration: 2,
         delay: 0.4,
-        text: "Web Design <br /> Web Development <br /> AfterEffects <br /> 3D ",
-        ease: "none",
+        text: "Web Design<br />Web Development<br />AfterEffects<br />3D",
       });
     }
   }, []);
 
   return (
     <div className="homePage">
-      {/* <Loader /> */}
-      <Navigation />
+      {/* <Navigation /> */}
       <div className="homePageContainer">
-        <div className="homePageCopy third">
-          <p className="copy" ref={paragraphRef}></p>
-        </div>
-        <div className="logoContainer threeQuarter">
+        <div className="logoContainer">
           <Logo />
+        </div>
+        <div className="homePageCopy">
+          <p className="copy" ref={paragraphRef}></p>
         </div>
       </div>
     </div>

@@ -9,6 +9,10 @@
   src: url("./assets/Comic Sans MS.ttf");
 }
 @font-face {
+  font-family: "Groothan";
+  src: url("./assets/GroothanMixedDEMO.otf");
+}
+@font-face {
   font-family: "Nohemi";
   src: url("./assets/Nohemi-Bold.woff2") format("woff2"), url("./assets/Nohemi-Bold.woff") format("woff");
   font-weight: bold;
@@ -16,12 +20,8 @@
   font-display: swap;
 }
 body {
-  background: #d6cdcd;
+  background: #ffffff;
   font-family: "Nohemi", sans-serif;
-}
-
-h1 {
-  letter-spacing: -12.5px !important;
 }
 
 p {
@@ -33,24 +33,19 @@ p {
 }
 
 .coloured {
-  color: #ff4a02;
+  color: #145d35;
 }
 
 .navigation .navWrapper {
   display: none;
-}
-.navigation #squares {
+  backdrop-filter: blur(30px);
+  background-color: rgba(238, 238, 238, 0.6);
+  width: 100vw;
+  height: 100vh;
   position: fixed;
-  top: 0px;
   left: 0px;
-  z-index: 100;
-}
-.navigation #squares .loaderCube {
-  opacity: 0;
-  fill: #333;
-  width: 120px;
-  height: 120px;
-  margin: 1px;
+  top: 0px;
+  z-index: 10000;
 }
 .navigation #Layer_3 {
   cursor: pointer;
@@ -58,7 +53,7 @@ p {
   transition: 0.2s ease-in-out;
 }
 .navigation #Layer_3 .cls-2 {
-  fill: #ff4a02;
+  fill: #145d35;
 }
 .navigation #Layer_3:hover {
   rotate: -90deg;
@@ -75,24 +70,40 @@ p {
   z-index: 1000000;
 }
 .navigation .navigationLinks .links {
-  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
 }
 .navigation .navigationLinks .links .link {
   font-family: "Nohemi", sans-serif;
-  font-weight: 900;
-  letter-spacing: -5px;
-  font-size: 150px;
-  line-height: 140px;
+  font-size: 30px;
+  color: rgba(48, 48, 48, 0.9);
+  display: inline-block;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
   text-decoration: none;
-  color: #d6cdcd;
-  transition: 0.3s ease;
+  transition: color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.navigation .navigationLinks .links .link:hover::before {
-  content: "_";
-  color: #ff4a02;
+.navigation .navigationLinks .links .link span {
+  display: inline-block;
+  pointer-events: none;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.navigation .navigationLinks .links .link .second {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transform: translateY(100%);
+  color: #145d35;
 }
 .navigation .navigationLinks .closeNav {
   position: absolute;
@@ -115,30 +126,19 @@ p {
 .portfolio .navigationButton .close {
   opacity: 0;
 }
-.portfolio .homePage .full {
-  width: 100%;
-}
-.portfolio .homePage .threeQuarter {
-  width: 75%;
-}
-.portfolio .homePage .half {
-  width: 50%;
-}
-.portfolio .homePage .third {
-  width: 33%;
-}
-.portfolio .homePage .quarter {
-  width: 25%;
-}
 .portfolio .homePage .homePageContainer {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
+.portfolio .homePage .homePageContainer .homePageCopy {
+  width: 100%;
+}
 .portfolio .homePage .logoContainer {
   position: absolute;
-  bottom: 50px;
-  right: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .portfolio .homePage .logoContainer .logoWrapper {
   display: flex;
@@ -148,28 +148,12 @@ p {
   gap: 30px;
   cursor: pointer;
 }
-.portfolio .homePage .logoContainer .logoWrapper h1 {
-  height: 100%;
-  font-size: 12vw;
-  letter-spacing: -1.5vw;
-  z-index: 0;
-  white-space: nowrap;
-  color: #202020;
-}
-.portfolio .homePage .logoContainer .logoWrapper h1 span {
-  height: 100%;
-}
-.portfolio .homePage .logoContainer .logoWrapper svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.portfolio .homePage .logoContainer .logoWrapper .logoText {
   text-align: center;
-  max-width: 10%;
-  min-width: 10%;
 }
-.portfolio .homePage .logoContainer .logoWrapper svg .rect {
-  z-index: 1000;
-  fill: #ff4a02;
+.portfolio .homePage .logoContainer .logoWrapper .logoText img {
+  width: 100%;
+  height: 100%;
 }
 
 .workPage,
@@ -192,12 +176,12 @@ p {
 .workPageContainer .workItemsContainer ul li,
 .workItemsContainer .workItemsContainer ul li {
   list-style-type: none;
-  font-family: "Nohemi", sans-serif;
+  font-family: "GROOTHAn";
+  text-transform: lowercase;
   font-size: 130px;
   line-height: 115px;
   font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -10px;
+  letter-spacing: -5px;
 }
 .workPage .workItemsContainer ul li img,
 .workItems .workItemsContainer ul li img,
@@ -227,7 +211,7 @@ p {
 .workPageContainer .workItemsContainer ul li a:hover::before,
 .workItemsContainer .workItemsContainer ul li a:hover::before {
   content: "_";
-  color: #ff4a02;
+  color: #145d35;
 }
 
 .about {
@@ -244,11 +228,11 @@ p {
   margin: 0px 5%;
 }
 .about .aboutContainer .gridItem a {
-  color: #ff4a02;
+  color: #145d35;
 }
 .about .aboutContainer .gridItem h2 {
   font-size: 40px;
-  color: #ff4a02;
+  color: #145d35;
 }
 .about .aboutContainer .gridItem p {
   font-family: "Helvetica", sans-serif;
@@ -275,5 +259,5 @@ p {
   width: 50%;
 }
 .chat .chatContainer a {
-  color: #ff4a02;
+  color: #145d35;
 }

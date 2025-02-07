@@ -1,11 +1,9 @@
 import React from "react";
-import Navigation from "../Components/Navigation";
 import Portrait from "../assets/images/stockportrait.jpg";
 
 function About() {
   return (
     <div className="about">
-      <Navigation />
       <div className="aboutContainer">
         <div className="gridItem gridOne">
           <img src={Portrait} alt="" />

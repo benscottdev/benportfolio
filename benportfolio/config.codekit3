@@ -89,6 +89,22 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/public\/pie.glb" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/pie.glb",
+      "oF" : 0
+    },
+    "\/public\/pie.gltf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/pie.gltf",
+      "oF" : 0
+    },
     "\/public\/robots.txt" : {
       "cB" : 0,
       "ft" : 8192,
@@ -143,6 +159,14 @@
       "oAP" : "\/src\/assets\/Comic Sans MS.ttf",
       "oF" : 0
     },
+    "\/src\/assets\/GroothanMixedDEMO.otf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/assets\/GroothanMixedDEMO.otf",
+      "oF" : 0
+    },
     "\/src\/assets\/images\/benscott.png" : {
       "ft" : 32768,
       "iS" : 352003,
@@ -177,6 +201,19 @@
       "oF" : 0,
       "opt" : 0,
       "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
+    "\/src\/assets\/images\/logo.png" : {
+      "ft" : 32768,
+      "iS" : 19493,
+      "oA" : 0,
+      "oAP" : "\/src\/assets\/images\/logo.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
       "rq" : 75
     },
     "\/src\/assets\/images\/songworks.png" : {
