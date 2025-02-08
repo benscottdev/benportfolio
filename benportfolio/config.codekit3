@@ -151,21 +151,58 @@
       "oAP" : "\/src\/assets\/Akira.otf",
       "oF" : 0
     },
-    "\/src\/assets\/Comic Sans MS.ttf" : {
+    "\/src\/assets\/fonts\/Comic Sans MS.ttf" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/src\/assets\/Comic Sans MS.ttf",
+      "oAP" : "\/src\/assets\/fonts\/Comic Sans MS.ttf",
       "oF" : 0
     },
-    "\/src\/assets\/GroothanMixedDEMO.otf" : {
+    "\/src\/assets\/fonts\/GroothanMixedDEMORegular.woff" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/src\/assets\/GroothanMixedDEMO.otf",
+      "oAP" : "\/src\/assets\/fonts\/GroothanMixedDEMORegular.woff",
       "oF" : 0
+    },
+    "\/src\/assets\/fonts\/GroothanMixedDEMORegular.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/assets\/fonts\/GroothanMixedDEMORegular.woff2",
+      "oF" : 0
+    },
+    "\/src\/assets\/fonts\/Nohemi-Bold.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/assets\/fonts\/Nohemi-Bold.woff",
+      "oF" : 0
+    },
+    "\/src\/assets\/fonts\/Nohemi-Bold.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/assets\/fonts\/Nohemi-Bold.woff2",
+      "oF" : 0
+    },
+    "\/src\/assets\/images\/ben.jpg" : {
+      "ft" : 16384,
+      "iS" : 916894,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/assets\/images\/ben.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/src\/assets\/images\/benscott.png" : {
       "ft" : 32768,
@@ -250,21 +287,16 @@
       "oAP" : "\/src\/assets\/logo.ai",
       "oF" : 0
     },
-    "\/src\/assets\/Nohemi-Bold.woff" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
+    "\/src\/Components\/Banner.jsx" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/src\/assets\/Nohemi-Bold.woff",
-      "oF" : 0
-    },
-    "\/src\/assets\/Nohemi-Bold.woff2" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/src\/assets\/Nohemi-Bold.woff2",
-      "oF" : 0
+      "oAP" : "\/src\/Components\/Banner-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/src\/Components\/Loader.jsx" : {
       "bF" : 0,
@@ -371,6 +403,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/src\/Pages\/Work-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/src\/plugins\/Draggable.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/src\/plugins\/Draggable-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0

@@ -6,22 +6,25 @@
 
 @font-face {
   font-family: "Comic Sans";
-  src: url("./assets/Comic Sans MS.ttf");
+  src: url("./assets/fonts/Comic Sans MS.ttf");
 }
 @font-face {
   font-family: "Groothan";
-  src: url("./assets/GroothanMixedDEMO.otf");
+  src: url("./assets/fonts/GroothanMixedDEMORegular.woff2") format("woff2"), url("./assets/fonts/GroothanMixedDEMORegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Nohemi";
-  src: url("./assets/Nohemi-Bold.woff2") format("woff2"), url("./assets/Nohemi-Bold.woff") format("woff");
+  src: url("./assets/fonts/Nohemi-Bold.woff2") format("woff2"), url("./assets/fonts/Nohemi-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 body {
   background: #ffffff;
-  font-family: "Nohemi", sans-serif;
+  overflow-x: hidden;
 }
 
 p {
@@ -52,6 +55,11 @@ p {
   width: 50px;
   transition: 0.2s ease-in-out;
 }
+@media (max-width: 800px) {
+  .navigation #Layer_3 {
+    width: 30px;
+  }
+}
 .navigation #Layer_3 .cls-2 {
   fill: #145d35;
 }
@@ -78,6 +86,12 @@ p {
   display: flex;
   align-items: left;
   justify-content: space-evenly;
+}
+@media (max-width: 800px) {
+  .navigation .navigationLinks .links {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .navigation .navigationLinks .links .link {
   font-family: "Nohemi", sans-serif;
@@ -146,7 +160,7 @@ p {
   justify-content: center;
   flex-direction: row;
   gap: 30px;
-  cursor: pointer;
+  cursor: default;
 }
 .portfolio .homePage .logoContainer .logoWrapper .logoText {
   text-align: center;
@@ -154,6 +168,24 @@ p {
 .portfolio .homePage .logoContainer .logoWrapper .logoText img {
   width: 100%;
   height: 100%;
+}
+.portfolio .homePage .logoContainer .logoWrapper .logoText .ben,
+.portfolio .homePage .logoContainer .logoWrapper .logoText .scott {
+  font-family: "Groothan";
+  font-size: 23vw;
+  color: #145d35;
+  line-height: 100px;
+  font-weight: 900;
+  letter-spacing: -0.1em;
+}
+@media (max-width: 800px) {
+  .portfolio .homePage .logoContainer .logoWrapper .logoText .ben,
+  .portfolio .homePage .logoContainer .logoWrapper .logoText .scott {
+    font-size: 20vw;
+  }
+}
+.portfolio .homePage .logoContainer .logoWrapper .logoText .ben {
+  color: rgb(197, 197, 197);
 }
 
 .workPage,
@@ -168,7 +200,7 @@ p {
 .workPageContainer .workItemsContainer,
 .workItemsContainer .workItemsContainer {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
 }
 .workPage .workItemsContainer ul li,
@@ -181,7 +213,18 @@ p {
   font-size: 130px;
   line-height: 115px;
   font-weight: 900;
-  letter-spacing: -5px;
+  letter-spacing: -0.05em;
+  margin-bottom: -20px;
+}
+@media (max-width: 800px) {
+  .workPage .workItemsContainer ul li,
+  .workItems .workItemsContainer ul li,
+  .workPageContainer .workItemsContainer ul li,
+  .workItemsContainer .workItemsContainer ul li {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -0.05em;
+  }
 }
 .workPage .workItemsContainer ul li img,
 .workItems .workItemsContainer ul li img,
@@ -199,53 +242,171 @@ p {
   object-fit: cover;
   z-index: -10;
 }
+@media (max-width: 800px) {
+  .workPage .workItemsContainer ul li img,
+  .workItems .workItemsContainer ul li img,
+  .workPageContainer .workItemsContainer ul li img,
+  .workItemsContainer .workItemsContainer ul li img {
+    height: 250px;
+    min-height: 200px;
+    min-width: 400px;
+  }
+}
 .workPage .workItemsContainer ul li a,
 .workItems .workItemsContainer ul li a,
 .workPageContainer .workItemsContainer ul li a,
 .workItemsContainer .workItemsContainer ul li a {
+  display: inline-block;
+  position: relative;
   color: #202020;
   text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
 }
-.workPage .workItemsContainer ul li a:hover::before,
-.workItems .workItemsContainer ul li a:hover::before,
-.workPageContainer .workItemsContainer ul li a:hover::before,
-.workItemsContainer .workItemsContainer ul li a:hover::before {
-  content: "_";
+.workPage .workItemsContainer ul li a span,
+.workItems .workItemsContainer ul li a span,
+.workPageContainer .workItemsContainer ul li a span,
+.workItemsContainer .workItemsContainer ul li a span {
+  padding: 0px 10px;
+  display: inline-block;
+  pointer-events: none;
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.workPage .workItemsContainer ul li a .second,
+.workItems .workItemsContainer ul li a .second,
+.workPageContainer .workItemsContainer ul li a .second,
+.workItemsContainer .workItemsContainer ul li a .second {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transform: translateY(100%);
   color: #145d35;
 }
 
-.about {
+.about,
+.aboutContainer {
   width: 100%;
   height: 100%;
+  margin-top: 25px;
 }
-.about .aboutContainer {
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: end;
+.about .aboutItem,
+.aboutContainer .aboutItem {
+  padding: 50px;
+  display: flex;
+  gap: 20px;
+  width: 100%;
 }
-.about .aboutContainer .gridItem {
-  margin: 0px 5%;
+@media (max-width: 1000px) {
+  .about .aboutItem,
+  .aboutContainer .aboutItem {
+    flex-direction: column;
+  }
 }
-.about .aboutContainer .gridItem a {
-  color: #145d35;
+.about .aboutItem p,
+.aboutContainer .aboutItem p {
+  width: 50%;
+  font-size: 24px;
 }
-.about .aboutContainer .gridItem h2 {
-  font-size: 40px;
-  color: #145d35;
+@media (max-width: 1000px) {
+  .about .aboutItem p,
+  .aboutContainer .aboutItem p {
+    width: 100%;
+  }
 }
-.about .aboutContainer .gridItem p {
-  font-family: "Helvetica", sans-serif;
+@media (max-width: 1200px) {
+  .about .aboutItem p,
+  .aboutContainer .aboutItem p {
+    font-size: 18px;
+    letter-spacing: -1px;
+  }
 }
-.about .aboutContainer .gridItem .funFact {
-  margin-bottom: 5px;
-}
-.about .aboutContainer .gridItem img {
+.about .aboutItem img,
+.aboutContainer .aboutItem img {
+  width: 50%;
   max-height: 80vh;
-  width: 100%;
   object-fit: cover;
-  border: 1px solid black;
   object-position: top;
+}
+@media (max-width: 1000px) {
+  .about .aboutItem img,
+  .aboutContainer .aboutItem img {
+    width: 100%;
+  }
+}
+.about .funFacts,
+.aboutContainer .funFacts {
+  height: 100%;
+}
+.about .funFacts .funFactsWrapper,
+.aboutContainer .funFacts .funFactsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.about .funFacts .funFactsWrapper .factAnswer,
+.about .funFacts .funFactsWrapper .factQuestion,
+.aboutContainer .funFacts .funFactsWrapper .factAnswer,
+.aboutContainer .funFacts .funFactsWrapper .factQuestion {
+  font-family: "Nohemi", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+}
+.about .funFacts .funFactsWrapper .factQuestion,
+.aboutContainer .funFacts .funFactsWrapper .factQuestion {
+  font-size: 50px;
+  color: #0073ed;
+}
+.about .funFacts .funFactsWrapper .factAnswer,
+.aboutContainer .funFacts .funFactsWrapper .factAnswer {
+  font-size: 100px;
+}
+.about .funFacts .funFactsWrapper .button,
+.aboutContainer .funFacts .funFactsWrapper .button {
+  background-color: #0073ed;
+  color: #fff8b1;
+  font-family: "Groothan";
+  font-size: 44px;
+  padding: 15px 30px;
+  border-radius: 20px;
+  text-align: center;
+  letter-spacing: -2px;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: 0.2s ease;
+  border: 3px solid #0073ed;
+}
+.about .funFacts .funFactsWrapper .button:hover,
+.aboutContainer .funFacts .funFactsWrapper .button:hover {
+  background-color: #fff8b1;
+  border: 3px solid #0073ed;
+  color: #0073ed;
+}
+.about .funFacts .funFactsWrapper .button:active,
+.aboutContainer .funFacts .funFactsWrapper .button:active {
+  scale: 0.9;
+}
+
+.banner {
+  width: 99vw;
+  left: 0px;
+  position: absolute;
+  padding: 20px;
+  background-color: #202020;
+  color: white;
+  overflow: hidden;
+}
+.banner h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 60px;
+  text-align: center;
+  font-family: "Nohemi", sans-serif;
 }
 
 .chat {

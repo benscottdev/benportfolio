@@ -1,8 +1,10 @@
 import React from "react";
+import Navigation from "../Components/Navigation";
 
 function Chat() {
   return (
     <div className="chat">
+      <Navigation />
       <div className="chatContainer">
         <p>
           Ready to collaborate and bring your ideas to life online? Count me in. Whether you've got questions, bursts of creativity, or you're just eager to chat about the latest web trends, I'm all ears. Let's roll up our sleeves and create something awesome together!

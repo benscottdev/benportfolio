@@ -4,13 +4,16 @@ import { useState } from "react";
 
 function Navigation() {
   let [navState, setNavState] = useState(true);
+  const body = document.querySelector("body");
+  const closeNav = () => {
+    gsap.to(body, { scale: 1, duration: 0.5 });
+  };
 
   const openNav = () => {
     const close = document.querySelectorAll(".close");
     const navLinks = document.querySelector(".navigationLinks");
     let links = document.querySelectorAll(".link");
     const navWrapper = document.querySelector(".navWrapper");
-    const body = document.querySelector("body");
 
     if (navState === true) {
       const tl = gsap.timeline();
@@ -66,7 +69,7 @@ function Navigation() {
         <div className="navigationLinks">
           <div className="links">
             {navs.map((link) => (
-              <Link className="link" to={link.path} onMouseEnter={navEnter} onMouseLeave={navLeave}>
+              <Link className="link" to={link.path} onMouseEnter={navEnter} onMouseLeave={navLeave} onClick={closeNav}>
                 <span className="first">{link.name}</span>
                 <span className="second">{link.name}</span>
               </Link>

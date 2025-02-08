@@ -5,6 +5,12 @@ import BenScottImage from "../assets/images/benscott.png";
 import ClaudiaImage from "../assets/images/claudia.png";
 
 function WorkItems() {
+  let work = [
+    { name: "SongWorks", path: "https://songworks.com.au", image: SongworksImage },
+    { name: "Claudia's", path: "https://claudiabluespoint.com/home", image: ClaudiaImage },
+    { name: "Ben Scott", path: "/", image: BenScottImage },
+  ];
+
   useEffect(() => {
     const items = document.querySelectorAll(".item-pic");
 
@@ -21,35 +27,34 @@ function WorkItems() {
 
       el.addEventListener("mousemove", (e) => {
         const { clientX, clientY } = e;
-        gsap.to(image, { x: clientX - el.offsetLeft - 250, y: clientY - el.offsetTop - 0 });
+        gsap.to(image, { x: clientX - el.offsetLeft - 0, y: clientY - el.offsetTop - 0 });
       });
     });
   }, []);
+
+  const hoverOn = (e) => {
+    gsap.to(e.target.querySelector(".first"), { yPercent: -100, duration: 0.01, ease: "power1.inOut" });
+    gsap.to(e.target.querySelector(".second"), { yPercent: -100, duration: 0.01, ease: "power1.inOut" });
+  };
+
+  const hoverOff = (e) => {
+    gsap.to(e.target.querySelector(".first"), { yPercent: 0, duration: 0.01, ease: "power1.inOut" });
+    gsap.to(e.target.querySelector(".second"), { yPercent: 0, duration: 0.01, ease: "power1.inOut" });
+  };
 
   return (
     <div className="workItems">
       <div className="workItemsContainer">
         <ul>
-          <li className="item-pic">
-            <a href="https://songworks.com.au" target="_blank" className="workItemText">
-              SongWorks
-            </a>
-            <img src={SongworksImage} alt="SongWorks" className="itemImg" style={{ opacity: 0, position: "absolute" }} />
-          </li>
-
-          <li className="item-pic">
-            <a href="https://claudiabluespoint.com/home" target="_blank">
-              Claudia's
-            </a>
-            <img src={ClaudiaImage} alt="Example" className="itemImg" style={{ opacity: 0, position: "absolute" }} />
-          </li>
-
-          <li className="item-pic">
-            <a href="/" target="_blank">
-              Ben Scott
-            </a>
-            <img src={BenScottImage} alt="Example" className="itemImg" style={{ opacity: 0, position: "absolute" }} />
-          </li>
+          {work.map((i) => (
+            <li className="item-pic" onMouseEnter={hoverOn} onMouseLeave={hoverOff}>
+              <a href={i.link} target="_blank" className="workItemText">
+                <span className="first">{i.name}</span>
+                <span className="second">{i.name}</span>
+              </a>
+              <img src={i.image} alt={i.name} style={{ opacity: 0, position: "absolute" }} className="itemImg" />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

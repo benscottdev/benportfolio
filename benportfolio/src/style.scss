@@ -8,16 +8,19 @@
 
 @font-face {
   font-family: "Comic Sans";
-  src: url("./assets/Comic\ Sans\ MS.ttf");
+  src: url("./assets/fonts/Comic\ Sans\ MS.ttf");
 }
 @font-face {
   font-family: "Groothan";
-  src: url("./assets/GroothanMixedDEMO.otf");
+  src: url("./assets/fonts/GroothanMixedDEMORegular.woff2") format("woff2"), url("./assets/fonts/GroothanMixedDEMORegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Nohemi";
-  src: url("./assets/Nohemi-Bold.woff2") format("woff2"), url("./assets/Nohemi-Bold.woff") format("woff");
+  src: url("./assets/fonts/Nohemi-Bold.woff2") format("woff2"), url("./assets/fonts/Nohemi-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -35,7 +38,7 @@ $comicSans: "Comic Sans";
 
 body {
   background: $background;
-  font-family: $mainFont;
+  overflow-x: hidden;
 }
 
 p {
@@ -69,6 +72,10 @@ p {
     cursor: pointer;
     width: 50px;
     transition: 0.2s ease-in-out;
+
+    @media (max-width: 800px) {
+      width: 30px;
+    }
     .cls-2 {
       fill: $feature;
     }
@@ -98,6 +105,11 @@ p {
       display: flex;
       align-items: left;
       justify-content: space-evenly;
+
+      @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+      }
 
       // position: relative;
 
@@ -181,7 +193,7 @@ p {
         justify-content: center;
         flex-direction: row;
         gap: 30px;
-        cursor: pointer;
+        cursor: default;
 
         .logoText {
           text-align: center;
@@ -189,6 +201,23 @@ p {
           img {
             width: 100%;
             height: 100%;
+          }
+
+          .ben,
+          .scott {
+            font-family: "Groothan";
+            font-size: 23vw;
+            color: $feature;
+            line-height: 100px;
+            font-weight: 900;
+            letter-spacing: -0.1em;
+
+            @media (max-width: 800px) {
+              font-size: 20vw;
+            }
+          }
+          .ben {
+            color: rgb(197, 197, 197);
           }
         }
       }
@@ -205,7 +234,7 @@ p {
 
   .workItemsContainer {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-start;
 
     ul {
@@ -217,7 +246,14 @@ p {
         line-height: 115px;
         font-weight: 900;
         // text-transform: uppercase;
-        letter-spacing: -5px;
+        letter-spacing: -0.05em;
+        margin-bottom: -20px;
+
+        @media (max-width: 800px) {
+          font-size: 50px;
+          line-height: 50px;
+          letter-spacing: -0.05em;
+        }
 
         img {
           border: 1px solid black;
@@ -231,17 +267,39 @@ p {
           opacity: 0;
           object-fit: cover;
           z-index: -10;
+
+          @media (max-width: 800px) {
+            height: 250px;
+            min-height: 200px;
+            min-width: 400px;
+          }
         }
 
         a {
+          display: inline-block;
+          // overflow: hidden;
+          position: relative;
           color: $mainFontColor;
           text-decoration: none;
+          cursor: pointer;
+          overflow: hidden;
 
-          &:hover {
-            &::before {
-              content: "_";
-              color: $feature;
-            }
+          span {
+            padding: 0px 10px;
+            display: inline-block;
+            pointer-events: none;
+            transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform;
+          }
+
+          .second {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            transform: translateY(100%);
+            color: $feature;
           }
         }
       }
@@ -249,45 +307,116 @@ p {
   }
 }
 
-.about {
+.about,
+.aboutContainer {
   width: 100%;
   height: 100%;
+  margin-top: 25px;
 
-  .aboutContainer {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: end;
+  .aboutItem {
+    padding: 50px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
 
-    .gridItem {
-      margin: 0px 5%;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
 
-      a {
-        color: $feature;
-      }
+    p {
+      width: 50%;
+      font-size: 24px;
 
-      h2 {
-        font-size: 40px;
-        color: $feature;
-      }
-
-      p {
-        font-family: $bodyFont;
-      }
-
-      .funFact {
-        margin-bottom: 5px;
-      }
-
-      img {
-        max-height: 80vh;
+      @media (max-width: 1000px) {
         width: 100%;
-        // max-height: 80vh;
-        object-fit: cover;
-        border: 1px solid black;
-        object-position: top;
+      }
+
+      @media (max-width: 1200px) {
+        font-size: 18px;
+        letter-spacing: -1px;
       }
     }
+
+    img {
+      width: 50%;
+      max-height: 80vh;
+      object-fit: cover;
+      // border: 1px solid black;
+      object-position: top;
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+  }
+  .funFacts {
+    height: 100%;
+
+    .funFactsWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      // gap: 25px;
+
+      .factAnswer,
+      .factQuestion {
+        font-family: $mainFont;
+        display: inline-block;
+        white-space: nowrap;
+      }
+
+      .factQuestion {
+        font-size: 50px;
+        color: #0073ed;
+      }
+      .factAnswer {
+        font-size: 100px;
+      }
+
+      .button {
+        background-color: #0073ed;
+        color: #fff8b1;
+        font-family: "Groothan";
+        font-size: 44px;
+        padding: 15px 30px;
+        border-radius: 20px;
+        text-align: center;
+        letter-spacing: -2px;
+        cursor: pointer;
+        margin-top: 50px;
+        transition: 0.2s ease;
+        border: 3px solid #0073ed;
+        &:hover {
+          background-color: #fff8b1;
+          border: 3px solid #0073ed;
+          color: #0073ed;
+        }
+
+        &:active {
+          scale: 0.9;
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  width: 99vw;
+  left: 0px;
+  position: absolute;
+  padding: 20px;
+  background-color: $mainFontColor;
+  color: white;
+  overflow: hidden;
+
+  h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 60px;
+    text-align: center;
+    font-family: $mainFont;
   }
 }
 

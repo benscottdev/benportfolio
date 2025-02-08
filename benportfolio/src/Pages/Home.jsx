@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <div className="homePage">
-      {/* <Navigation /> */}
+      <Navigation />
       <div className="homePageContainer">
         <div className="logoContainer">
           <Logo />
