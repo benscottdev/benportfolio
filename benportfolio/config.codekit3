@@ -39,6 +39,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/public\/BenScott2.glb" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/BenScott2.glb",
+      "oF" : 0
+    },
     "\/public\/favicon.ico" : {
       "cB" : 0,
       "ft" : 8192,
@@ -88,22 +96,6 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
-    },
-    "\/public\/pie.glb" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/public\/pie.glb",
-      "oF" : 0
-    },
-    "\/public\/pie.gltf" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/public\/pie.gltf",
-      "oF" : 0
     },
     "\/public\/robots.txt" : {
       "cB" : 0,
@@ -253,6 +245,16 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/src\/assets\/images\/newtab.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/src\/assets\/images\/newtab.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/src\/assets\/images\/songworks.png" : {
       "ft" : 32768,
       "iS" : 5485297,
@@ -305,6 +307,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/src\/Components\/Loader-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/src\/Components\/Logo-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/src\/Components\/Logo-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0

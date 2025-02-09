@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "../Components/Navigation";
 import Portrait from "../assets/images/ben.jpg";
 import Banner from "../Components/Banner";
+
 import gsap from "gsap";
 import ScrambleTextPlugin from "../plugins/ScrambleTextPlugin";
 gsap.registerPlugin(ScrambleTextPlugin);
@@ -63,7 +64,6 @@ function About() {
     const changeA = questions[randomNum].answer;
 
     const tl = gsap.timeline();
-
     tl.to(factQuestion, {
       duration: 0.5,
       scrambleText: {
@@ -100,40 +100,7 @@ function About() {
             If you're working on something cool and need a developer who loves both the technical and creative side of things, let's chat!
           </p>
         </div>
-
-        <div className="skills">
-          <span>Proficient</span>
-          <div className="languages">
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScipt</li>
-              <li>React</li>
-              <li>Blender</li>
-              <li>Figma</li>
-              <li>AfterEffects</li>
-            </ul>
-          </div>
-          <span>Improving</span>
-          <ul>
-            <li>FreeCad</li>
-            <li>PHP</li>
-            <li>Wordpress CMS</li>
-            <li>SQL</li>
-            <li>ThreeJS</li>
-          </ul>
-        </div>
-        <div className="wantToLearn">
-          <span>Next to Learn</span>
-          <ul>
-            <li>WEB GL</li>
-            <li>C</li>
-            <li>Arduino</li>
-            <li>Raspberi Pi</li>
-          </ul>
-        </div>
-
-        <Banner />
+        {/* <Banner /> */}
 
         <div className="funFacts">
           <div className="funFactsWrapper">

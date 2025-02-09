@@ -14,7 +14,7 @@ function Home() {
       gsap.to(paragraphRef.current, {
         duration: 2,
         delay: 0.4,
-        text: "Web Design<br />Web Development<br />AfterEffects<br />3D",
+        text: "Web Design<br />Web Development<br />Animation<br />3D",
       });
     }
   }, []);

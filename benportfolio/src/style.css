@@ -5,10 +5,6 @@
 }
 
 @font-face {
-  font-family: "Comic Sans";
-  src: url("./assets/fonts/Comic Sans MS.ttf");
-}
-@font-face {
   font-family: "Groothan";
   src: url("./assets/fonts/GroothanMixedDEMORegular.woff2") format("woff2"), url("./assets/fonts/GroothanMixedDEMORegular.woff") format("woff");
   font-weight: normal;
@@ -36,7 +32,7 @@ p {
 }
 
 .coloured {
-  color: #145d35;
+  color: #006afe;
 }
 
 .navigation .navWrapper {
@@ -44,11 +40,12 @@ p {
   backdrop-filter: blur(30px);
   background-color: rgba(238, 238, 238, 0.6);
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   position: fixed;
   left: 0px;
   top: 0px;
   z-index: 10000;
+  overflow: hidden;
 }
 .navigation #Layer_3 {
   cursor: pointer;
@@ -61,15 +58,17 @@ p {
   }
 }
 .navigation #Layer_3 .cls-2 {
-  fill: #145d35;
+  fill: #006afe;
 }
-.navigation #Layer_3:hover {
-  rotate: -90deg;
+@media (min-width: 600px) {
+  .navigation #Layer_3:hover {
+    rotate: -90deg;
+  }
 }
 .navigation .navigationLinks {
   padding: 50px;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   position: absolute;
   top: 0;
   left: 0;
@@ -117,19 +116,31 @@ p {
   left: 0;
   position: absolute;
   transform: translateY(100%);
-  color: #145d35;
+  color: #006afe;
 }
 .navigation .navigationLinks .closeNav {
   position: absolute;
   top: 50px;
   right: 50px;
 }
+@media (max-width: 1000px) {
+  .navigation .navigationLinks .closeNav {
+    top: 20px;
+    left: 20px;
+  }
+}
 
 .portfolio {
-  width: 100%;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   padding: 50px;
   position: relative;
+  overflow-x: hidden !important;
+}
+@media (max-width: 1000px) {
+  .portfolio {
+    padding: 20px;
+  }
 }
 .portfolio .navigationButton {
   z-index: 10000000;
@@ -137,8 +148,17 @@ p {
   top: 50px;
   right: 50px;
 }
+@media (max-width: 1000px) {
+  .portfolio .navigationButton {
+    top: 20px;
+    right: 20px;
+  }
+}
 .portfolio .navigationButton .close {
   opacity: 0;
+}
+.portfolio .homePage {
+  overflow: hidden;
 }
 .portfolio .homePage .homePageContainer {
   width: 100%;
@@ -148,19 +168,35 @@ p {
 .portfolio .homePage .homePageContainer .homePageCopy {
   width: 100%;
 }
+@media (max-width: 1000px) {
+  .portfolio .homePage .homePageContainer .homePageCopy .copy {
+    font-size: 16px;
+  }
+}
 .portfolio .homePage .logoContainer {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: default;
 }
 .portfolio .homePage .logoContainer .logoWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 30px;
   cursor: default;
+}
+.portfolio .homePage .logoContainer .logoWrapper .shadow {
+  width: 100%;
+  color: rgba(150, 150, 150, 0.4);
+  position: absolute;
+  font-family: "Groothan";
+  font-size: 23vw;
+  letter-spacing: -0.1em;
+  filter: blur(15px);
+  z-index: -199999;
+  user-select: none;
 }
 .portfolio .homePage .logoContainer .logoWrapper .logoText {
   text-align: center;
@@ -173,10 +209,12 @@ p {
 .portfolio .homePage .logoContainer .logoWrapper .logoText .scott {
   font-family: "Groothan";
   font-size: 23vw;
-  color: #145d35;
+  color: #006afe;
   line-height: 100px;
   font-weight: 900;
   letter-spacing: -0.1em;
+  user-select: none;
+  cursor: default;
 }
 @media (max-width: 800px) {
   .portfolio .homePage .logoContainer .logoWrapper .logoText .ben,
@@ -185,7 +223,7 @@ p {
   }
 }
 .portfolio .homePage .logoContainer .logoWrapper .logoText .ben {
-  color: rgb(197, 197, 197);
+  color: rgb(152, 152, 152);
 }
 
 .workPage,
@@ -210,11 +248,12 @@ p {
   list-style-type: none;
   font-family: "GROOTHAn";
   text-transform: lowercase;
-  font-size: 130px;
-  line-height: 115px;
+  font-size: 60px;
+  line-height: 1;
   font-weight: 900;
   letter-spacing: -0.05em;
   margin-bottom: -20px;
+  transition: color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 @media (max-width: 800px) {
   .workPage .workItemsContainer ul li,
@@ -226,10 +265,24 @@ p {
     letter-spacing: -0.05em;
   }
 }
-.workPage .workItemsContainer ul li img,
-.workItems .workItemsContainer ul li img,
-.workPageContainer .workItemsContainer ul li img,
-.workItemsContainer .workItemsContainer ul li img {
+.workPage .workItemsContainer ul li .newTab,
+.workItems .workItemsContainer ul li .newTab,
+.workPageContainer .workItemsContainer ul li .newTab,
+.workItemsContainer .workItemsContainer ul li .newTab {
+  height: 30px;
+  width: 30px;
+}
+.workPage .workItemsContainer ul li .newTab img,
+.workItems .workItemsContainer ul li .newTab img,
+.workPageContainer .workItemsContainer ul li .newTab img,
+.workItemsContainer .workItemsContainer ul li .newTab img {
+  width: 100%;
+  height: 100%;
+}
+.workPage .workItemsContainer ul li .itemImg,
+.workItems .workItemsContainer ul li .itemImg,
+.workPageContainer .workItemsContainer ul li .itemImg,
+.workItemsContainer .workItemsContainer ul li .itemImg {
   border: 1px solid black;
   position: absolute;
   min-height: 400px;
@@ -243,13 +296,15 @@ p {
   z-index: -10;
 }
 @media (max-width: 800px) {
-  .workPage .workItemsContainer ul li img,
-  .workItems .workItemsContainer ul li img,
-  .workPageContainer .workItemsContainer ul li img,
-  .workItemsContainer .workItemsContainer ul li img {
-    height: 250px;
-    min-height: 200px;
-    min-width: 400px;
+  .workPage .workItemsContainer ul li .itemImg,
+  .workItems .workItemsContainer ul li .itemImg,
+  .workPageContainer .workItemsContainer ul li .itemImg,
+  .workItemsContainer .workItemsContainer ul li .itemImg {
+    max-height: 150px;
+    min-width: auto;
+    min-height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
   }
 }
 .workPage .workItemsContainer ul li a,
@@ -283,7 +338,7 @@ p {
   left: 0;
   position: absolute;
   transform: translateY(100%);
-  color: #145d35;
+  color: #006afe;
 }
 
 .about,
@@ -326,7 +381,7 @@ p {
 .about .aboutItem img,
 .aboutContainer .aboutItem img {
   width: 50%;
-  max-height: 80vh;
+  max-height: 80dvh;
   object-fit: cover;
   object-position: top;
 }
@@ -338,7 +393,7 @@ p {
 }
 .about .funFacts,
 .aboutContainer .funFacts {
-  height: 100%;
+  height: 50%;
 }
 .about .funFacts .funFactsWrapper,
 .aboutContainer .funFacts .funFactsWrapper {
@@ -347,6 +402,9 @@ p {
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  width: 90%;
+  gap: 25px;
+  margin: 0 auto;
 }
 .about .funFacts .funFactsWrapper .factAnswer,
 .about .funFacts .funFactsWrapper .factQuestion,
@@ -354,20 +412,33 @@ p {
 .aboutContainer .funFacts .funFactsWrapper .factQuestion {
   font-family: "Nohemi", sans-serif;
   display: inline-block;
-  white-space: nowrap;
+  text-align: center;
 }
 .about .funFacts .funFactsWrapper .factQuestion,
 .aboutContainer .funFacts .funFactsWrapper .factQuestion {
   font-size: 50px;
-  color: #0073ed;
+  color: #ff5b00;
+}
+@media (max-width: 1000px) {
+  .about .funFacts .funFactsWrapper .factQuestion,
+  .aboutContainer .funFacts .funFactsWrapper .factQuestion {
+    font-size: 24px;
+  }
 }
 .about .funFacts .funFactsWrapper .factAnswer,
 .aboutContainer .funFacts .funFactsWrapper .factAnswer {
-  font-size: 100px;
+  font-size: 80px;
+  width: 90%;
+}
+@media (max-width: 1000px) {
+  .about .funFacts .funFactsWrapper .factAnswer,
+  .aboutContainer .funFacts .funFactsWrapper .factAnswer {
+    font-size: 30px;
+  }
 }
 .about .funFacts .funFactsWrapper .button,
 .aboutContainer .funFacts .funFactsWrapper .button {
-  background-color: #0073ed;
+  background-color: #ff5b00;
   color: #fff8b1;
   font-family: "Groothan";
   font-size: 44px;
@@ -376,19 +447,26 @@ p {
   text-align: center;
   letter-spacing: -2px;
   cursor: pointer;
-  margin-top: 50px;
   transition: 0.2s ease;
-  border: 3px solid #0073ed;
+  border: 3px solid #ff5b00;
 }
-.about .funFacts .funFactsWrapper .button:hover,
-.aboutContainer .funFacts .funFactsWrapper .button:hover {
-  background-color: #fff8b1;
-  border: 3px solid #0073ed;
-  color: #0073ed;
+@media (min-width: 600px) {
+  .about .funFacts .funFactsWrapper .button:hover,
+  .aboutContainer .funFacts .funFactsWrapper .button:hover {
+    background-color: transparent;
+    border: 3px solid #ff5b00;
+    color: #ff5b00;
+  }
 }
 .about .funFacts .funFactsWrapper .button:active,
 .aboutContainer .funFacts .funFactsWrapper .button:active {
   scale: 0.9;
+}
+@media (max-width: 1000px) {
+  .about .funFacts .funFactsWrapper .button,
+  .aboutContainer .funFacts .funFactsWrapper .button {
+    font-size: 24px;
+  }
 }
 
 .banner {
@@ -419,6 +497,11 @@ p {
 .chat .chatContainer {
   width: 50%;
 }
+@media (max-width: 1000px) {
+  .chat .chatContainer {
+    width: 90%;
+  }
+}
 .chat .chatContainer a {
-  color: #145d35;
+  color: #006afe;
 }

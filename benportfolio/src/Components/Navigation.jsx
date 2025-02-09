@@ -5,8 +5,12 @@ import { useState } from "react";
 function Navigation() {
   let [navState, setNavState] = useState(true);
   const body = document.querySelector("body");
-  const closeNav = () => {
-    gsap.to(body, { scale: 1, duration: 0.5 });
+
+  const closeNav = (e) => {
+    const portfolio = document.querySelector(".portfolio"); // Moved inside the function
+    if (portfolio) {
+      gsap.to(portfolio, { scale: 1, duration: 0.5, overflow: "visible" });
+    }
   };
 
   const openNav = () => {
@@ -15,19 +19,21 @@ function Navigation() {
     let links = document.querySelectorAll(".link");
     const navWrapper = document.querySelector(".navWrapper");
 
-    if (navState === true) {
+    if (navWrapper.style.display !== "block") {
+      const portfolio = document.querySelector(".portfolio");
       const tl = gsap.timeline();
       setNavState(false);
-      tl.to(body, { scale: 0.9, duration: 0.5 });
+      tl.fromTo(portfolio, { scale: 1 }, { scale: 0.9, duration: 0.5, overflow: "hidden" });
       tl.to(navWrapper, { display: "block", duration: 0.5 }, "-=0.5");
       tl.fromTo(navWrapper, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1 }, "-=0.5");
       tl.to(navLinks, { display: "block", duration: 0.5 }, "-=0");
       tl.fromTo(links, { autoAlpha: 0 }, { autoAlpha: 1, stagger: 0.35, duration: 0.2, ease: "power1.in" }, "-=0.4");
       gsap.to(close, { opacity: 1, duration: 0.5, delay: 0.2, stagger: 0.25 });
     } else {
+      const portfolio = document.querySelector(".portfolio");
       const tl = gsap.timeline();
       setNavState(true);
-      tl.to(body, { scale: 1, duration: 0.5 });
+      tl.to(portfolio, { scale: 1, duration: 0.5, overflow: "visible" });
       tl.to(links, { autoAlpha: 0, stagger: 0.05, duration: 1, ease: "power1.out" }, "-=0.5");
       tl.to(navLinks, { display: "none" }, "-=0.5");
       tl.to(navWrapper, { autoAlpha: 0 }, "-=0.5");

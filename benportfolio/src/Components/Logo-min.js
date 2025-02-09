@@ -1,0 +1,1 @@
+const logoRef=useRef(null);useEffect((()=>{const e=e=>{if(!logoRef.current)return;const n=e.clientX-window.innerWidth/2,o=e.clientY-window.innerHeight/2;gsap.to(logoRef.current,{x:n/10,y:o/10,skewX:n/50,duration:1})};return document.body.addEventListener("mousemove",e),()=>document.body.removeEventListener("mousemove",e)}),[]);
