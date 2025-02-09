@@ -17,6 +17,211 @@
       "oAP" : "\/.gitignore",
       "oF" : 0
     },
+    "\/build\/asset-manifest.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/build\/asset-manifest-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/build\/BenScott2.glb" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/BenScott2.glb",
+      "oF" : 0
+    },
+    "\/build\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/favicon.ico",
+      "oF" : 0
+    },
+    "\/build\/index.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/index.html",
+      "oF" : 0
+    },
+    "\/build\/logo192.png" : {
+      "ft" : 32768,
+      "iS" : 5347,
+      "oA" : 0,
+      "oAP" : "\/build\/logo192.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/build\/logo512.png" : {
+      "ft" : 32768,
+      "iS" : 9664,
+      "oA" : 0,
+      "oAP" : "\/build\/logo512.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/build\/manifest.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/build\/manifest-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/build\/robots.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/robots.txt",
+      "oF" : 0
+    },
+    "\/build\/static\/css\/main.e127daa3.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/css\/main.e127daa3-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/build\/static\/css\/main.e127daa3.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/css\/main.e127daa3.css.map",
+      "oF" : 0
+    },
+    "\/build\/static\/js\/main.f4012a96.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/js\/main.f4012a96-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/build\/static\/js\/main.f4012a96.js.LICENSE.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/js\/main.f4012a96.js.LICENSE.txt",
+      "oF" : 0
+    },
+    "\/build\/static\/js\/main.f4012a96.js.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/js\/main.f4012a96.js.map",
+      "oF" : 0
+    },
+    "\/build\/static\/media\/ben.8762ea4a09292aceddde.jpg" : {
+      "ft" : 16384,
+      "iS" : 916894,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/media\/ben.8762ea4a09292aceddde.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/build\/static\/media\/benscott.db8a3d44680def344d5b.png" : {
+      "ft" : 32768,
+      "iS" : 352003,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/media\/benscott.db8a3d44680def344d5b.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/build\/static\/media\/claudia.29829bcb19130e8ee0ed.png" : {
+      "ft" : 32768,
+      "iS" : 2309537,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/media\/claudia.29829bcb19130e8ee0ed.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/build\/static\/media\/GroothanMixedDEMORegular.926a2676f5c4c13393fc.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/media\/GroothanMixedDEMORegular.926a2676f5c4c13393fc.woff2",
+      "oF" : 0
+    },
+    "\/build\/static\/media\/GroothanMixedDEMORegular.dd3b0062df41a546d752.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/media\/GroothanMixedDEMORegular.dd3b0062df41a546d752.woff",
+      "oF" : 0
+    },
+    "\/build\/static\/media\/Nohemi-Bold.659a002158a937ebb4ad.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/media\/Nohemi-Bold.659a002158a937ebb4ad.woff",
+      "oF" : 0
+    },
+    "\/build\/static\/media\/Nohemi-Bold.e20c408c69373f1cd083.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/media\/Nohemi-Bold.e20c408c69373f1cd083.woff2",
+      "oF" : 0
+    },
+    "\/build\/static\/media\/songworks.88b4c6ed8e9bf6cd3f3a.png" : {
+      "ft" : 32768,
+      "iS" : 5485297,
+      "oA" : 0,
+      "oAP" : "\/build\/static\/media\/songworks.88b4c6ed8e9bf6cd3f3a.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
     "\/node_modules" : {
       "ft" : 65536,
       "oA" : 2,
