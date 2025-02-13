@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Navigation from "../Components/Navigation";
 import Logo from "../Components/Logo";
+import LogoThree from "../Components/LogoThree";
 import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 

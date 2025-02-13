@@ -35,6 +35,13 @@ p {
   color: #006afe;
 }
 
+.threeCanvas {
+  position: absolute;
+  z-index: -9999;
+  width: 100dvw;
+  height: 100dvh;
+}
+
 .navigation .navWrapper {
   display: none;
   backdrop-filter: blur(30px);
@@ -144,7 +151,7 @@ p {
 }
 .portfolio .navigationButton {
   z-index: 10000000;
-  position: fixed;
+  position: absolute;
   top: 50px;
   right: 50px;
 }
@@ -191,9 +198,9 @@ p {
   width: 100%;
   color: rgba(150, 150, 150, 0.4);
   position: absolute;
-  font-family: "Groothan";
-  font-size: 23vw;
-  letter-spacing: -0.1em;
+  font-family: "Nohemi", sans-serif;
+  font-size: 14vw;
+  letter-spacing: -0.15em;
   filter: blur(15px);
   z-index: -199999;
   user-select: none;
@@ -207,12 +214,12 @@ p {
 }
 .portfolio .homePage .logoContainer .logoWrapper .logoText .ben,
 .portfolio .homePage .logoContainer .logoWrapper .logoText .scott {
-  font-family: "Groothan";
-  font-size: 23vw;
+  font-family: "Nohemi", sans-serif;
+  font-size: 14vw;
   color: #006afe;
   line-height: 100px;
   font-weight: 900;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.08em;
   user-select: none;
   cursor: default;
 }
@@ -223,7 +230,7 @@ p {
   }
 }
 .portfolio .homePage .logoContainer .logoWrapper .logoText .ben {
-  color: rgb(152, 152, 152);
+  color: #bababa;
 }
 
 .workPage,
@@ -393,7 +400,8 @@ p {
 }
 .about .funFacts,
 .aboutContainer .funFacts {
-  height: 50%;
+  margin: 50px 0px;
+  height: 75%;
 }
 .about .funFacts .funFactsWrapper,
 .aboutContainer .funFacts .funFactsWrapper {

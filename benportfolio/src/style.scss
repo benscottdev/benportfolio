@@ -47,6 +47,13 @@ p {
   color: $feature;
 }
 
+.threeCanvas {
+  position: absolute;
+  z-index: -9999;
+  width: 100dvw;
+  height: 100dvh;
+}
+
 // MAIN
 
 .navigation {
@@ -167,7 +174,7 @@ p {
 
   .navigationButton {
     z-index: 10000000;
-    position: fixed;
+    position: absolute;
     top: 50px;
     right: 50px;
 
@@ -218,9 +225,9 @@ p {
           width: 100%;
           color: rgba(150, 150, 150, 0.4);
           position: absolute;
-          font-family: "Groothan";
-          font-size: 23vw;
-          letter-spacing: -0.1em;
+          font-family: $mainFont;
+          font-size: 14vw;
+          letter-spacing: -0.15em;
           filter: blur(15px);
           z-index: -199999;
           user-select: none;
@@ -236,12 +243,13 @@ p {
 
           .ben,
           .scott {
-            font-family: "Groothan";
-            font-size: 23vw;
+            font-family: $mainFont;
+
+            font-size: 14vw;
             color: $feature;
             line-height: 100px;
             font-weight: 900;
-            letter-spacing: -0.1em;
+            letter-spacing: -0.08em;
             user-select: none;
             cursor: default;
 
@@ -250,7 +258,7 @@ p {
             }
           }
           .ben {
-            color: rgb(152, 152, 152);
+            color: #bababa;
           }
         }
       }
@@ -393,7 +401,8 @@ p {
     }
   }
   .funFacts {
-    height: 50%;
+    margin: 50px 0px;
+    height: 75%;
 
     .funFactsWrapper {
       display: flex;

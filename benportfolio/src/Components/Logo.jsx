@@ -10,6 +10,7 @@ function Logo() {
     const logoWrapper = document.querySelector(".logoWrapper");
     const logoText = document.querySelector(".logoText");
     const shadow = document.querySelector(".shadow");
+    const highlight = document.querySelector(".highlights");
 
     if (mql.matches) {
       Draggable.create(logoText, {
@@ -33,11 +34,11 @@ function Logo() {
         const moveY = (y - centerY) / 25;
         const skewX = (centerX - x) / 200;
         const skewY = (centerY - y) / 200;
-        const rotateX = (centerX - x) / 50;
-        const rotateY = (centerY - y) / 50;
+        const rotateX = (centerX - x) / 20;
+        const rotateY = (centerY - y) / 20;
 
-        gsap.to(logoText, { x: moveX, y: moveY, skewX, skewY, rotateX, rotateY, duration: 0.8 });
-        gsap.to(shadow, { x: moveX * 2.5, y: moveY * 2.5, skewX: skewX * 1.5, skewY: skewY * 1.5, rotateX, rotateY, duration: 1 });
+        gsap.to(logoText, { x: moveX, y: moveY, skewX, skewY, rotateX: rotateX, rotateY: rotateY, duration: 0.25 });
+        gsap.to(shadow, { x: moveX * 2.5, y: moveY * 2.5, skewX: skewX * 1.5, skewY: skewY * 1.5, rotateX, rotateY, duration: 0.3 });
       };
 
       document.body.addEventListener("mousemove", handleMouseMove);
@@ -52,7 +53,7 @@ function Logo() {
     <div className="Logo logoWrapper">
       <h1 className="logoText">
         <span className="ben">BEN</span>
-        <span className="scott">scott</span>
+        <span className="scott">SCOTT</span>
       </h1>
       <div className="shadow">BENscott</div>
     </div>

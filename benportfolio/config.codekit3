@@ -244,6 +244,22 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/public\/BenGlass.blend" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/BenGlass.blend",
+      "oF" : 0
+    },
+    "\/public\/BenGlass.glb" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/BenGlass.glb",
+      "oF" : 0
+    },
     "\/public\/BenScott2.glb" : {
       "cB" : 0,
       "ft" : 8192,
@@ -302,12 +318,28 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/public\/model.glb" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/model.glb",
+      "oF" : 0
+    },
     "\/public\/robots.txt" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/public\/robots.txt",
+      "oF" : 0
+    },
+    "\/public\/studio_small_08_4k.hdr" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/public\/studio_small_08_4k.hdr",
       "oF" : 0
     },
     "\/README.md" : {
@@ -372,6 +404,22 @@
       "oAP" : "\/src\/assets\/fonts\/GroothanMixedDEMORegular.woff2",
       "oF" : 0
     },
+    "\/src\/assets\/fonts\/NEOPIXEL-Regular.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/assets\/fonts\/NEOPIXEL-Regular.woff",
+      "oF" : 0
+    },
+    "\/src\/assets\/fonts\/NEOPIXEL-Regular.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/assets\/fonts\/NEOPIXEL-Regular.woff2",
+      "oF" : 0
+    },
     "\/src\/assets\/fonts\/Nohemi-Bold.woff" : {
       "cB" : 0,
       "ft" : 8192,
@@ -386,6 +434,22 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/src\/assets\/fonts\/Nohemi-Bold.woff2",
+      "oF" : 0
+    },
+    "\/src\/assets\/fonts\/NonBureau-Regular.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/assets\/fonts\/NonBureau-Regular.woff",
+      "oF" : 0
+    },
+    "\/src\/assets\/fonts\/NonBureau-Regular.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/assets\/fonts\/NonBureau-Regular.woff2",
       "oF" : 0
     },
     "\/src\/assets\/images\/ben.jpg" : {
@@ -534,6 +598,28 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/src\/Components\/Logo-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/src\/Components\/LogoThree-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/src\/Components\/LogoThree-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/src\/Components\/LogoThree.jsx" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/src\/Components\/LogoThree-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
